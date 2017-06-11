@@ -1,3 +1,8 @@
+/* StarCommGame
+   Author Andrii Vasin andriivasin@gmail.com
+   Very simple game for GeekBrains' Java lessons
+ */
+
 package com.mygdx.game;
 
 import com.badlogic.gdx.ApplicationAdapter;
@@ -10,7 +15,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import java.util.ArrayList;
 
 public class MyGdxGame extends ApplicationAdapter {
-    private SpriteBatch batch;
+    private SpriteBatch batch;  // the render zone
     private Background background;
     private Hero hero;
     private long pastTime;

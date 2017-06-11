@@ -1,3 +1,4 @@
+
 package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
@@ -7,10 +8,10 @@ import com.badlogic.gdx.math.Vector2;
 
 class Background {
 
-    class Star {
+    class Star {     //Stars template
         static final float SPEED_MAX = 500.0f;
         static final float SPEED_MIN = 60.0f;
-        private final Vector2 position;
+        private final Vector2 position;   //2 - its two coords that we use
         private float speed;
         private float size;
 
@@ -20,7 +21,7 @@ class Background {
             size = 0.5f + (speed / 300.0f);
         }
 
-        void update(long dt) {
+        void update(long dt) {  //60 times per second!!! OMG
             position.x -= speed * dt / 1000;
             if (position.x < 0) {
                 position.x = Gdx.graphics.getWidth();
@@ -36,7 +37,7 @@ class Background {
     private final Star[] stars;
 
     Background() {
-        texture = new Texture("staticback.jpg");
+        texture = new Texture("staticback.jpg");    //this shoul be in assest for working
         textureStar = new Texture("star12.tga");
         stars = new Star[300];
         for (int i = 0; i < stars.length; i++) {
